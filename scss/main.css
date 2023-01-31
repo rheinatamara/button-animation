@@ -1,0 +1,194 @@
+svg {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+body span {
+  font-size: 1.5rem;
+  text-align: center;
+  top: -1rem;
+}
+
+.bag-button {
+  position: relative;
+  padding: 10px;
+  width: 220px;
+  height: 60px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+.bag-button svg.bag {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  width: 55px;
+  height: 55px;
+}
+.bag-button svg.gift {
+  position: absolute;
+  z-index: 3;
+  top: -25%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+}
+
+.bag-button:active {
+  transform: scale(0.95);
+}
+
+.bag-button span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bag-button svg.arrow {
+  position: absolute;
+  z-index: 3;
+  left: 80%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bag-button .add-to-bag {
+  left: 40%;
+  top: 50%;
+}
+
+.bag-button span.add-to-bag {
+  opacity: 1;
+}
+
+.bag-button span.added {
+  opacity: 0;
+}
+
+.bag-button.clicked svg.bag {
+  -webkit-animation: bag 1.5s ease-in-out forwards;
+          animation: bag 1.5s ease-in-out forwards;
+}
+
+.bag-button.clicked svg.gift {
+  -webkit-animation: gift 1.5s ease-in-out forwards;
+          animation: gift 1.5s ease-in-out forwards;
+}
+
+.bag-button.clicked span.add-to-bag {
+  -webkit-animation: txt1 1.5s ease-in-out forwards;
+          animation: txt1 1.5s ease-in-out forwards;
+}
+
+.bag-button.clicked svg.arrow {
+  -webkit-animation: txt1 1.5s ease-in-out forwards;
+          animation: txt1 1.5s ease-in-out forwards;
+}
+
+.bag-button.clicked span.added {
+  -webkit-animation: txt2 1.5s ease-in-out forwards;
+          animation: txt2 1.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes bag {
+  0% {
+    left: -10%;
+  }
+  40%, 60% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes bag {
+  0% {
+    left: -10%;
+  }
+  40%, 60% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+@-webkit-keyframes gift {
+  0%, 40% {
+    top: -25%;
+  }
+  60% {
+    top: 60%;
+    left: 50%;
+  }
+  100% {
+    top: 60%;
+    left: 110%;
+  }
+}
+@keyframes gift {
+  0%, 40% {
+    top: -25%;
+  }
+  60% {
+    top: 60%;
+    left: 50%;
+  }
+  100% {
+    top: 60%;
+    left: 110%;
+  }
+}
+@-webkit-keyframes txt1 {
+  0% {
+    opacity: 1;
+  }
+  20%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes txt1 {
+  0% {
+    opacity: 1;
+  }
+  20%, 100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes txt2 {
+  0%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes txt2 {
+  0%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=main.css.map */
